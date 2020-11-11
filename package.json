@@ -1,0 +1,23 @@
+{
+  "name": "loruki-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "keywords": [],
+  "author": "Nadine Coelho",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-mode": "^1.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-watch": "4.3.11",
+    "node-sass": "^4.14.1"
+  }
+}
