@@ -1,0 +1,22 @@
+@import "../base/variables";
+
+.navbar {
+  background-color: $lightblue;
+  color: #fff;
+  height: 70px;
+  .flex {
+    justify-content: space-between;
+  }
+  &__navegation {
+    display: flex;
+  }
+
+  &__links {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+    &:hover {
+      border-bottom: 2px solid #fff;
+    }
+  }
+}
