@@ -2,21 +2,24 @@
 
 .navbar {
   background-color: $lightblue;
-  color: #fff;
+  color: $lightColor;
   height: 70px;
+
   .flex {
     justify-content: space-between;
   }
+
   &__navegation {
     display: flex;
   }
 
   &__links {
-    color: #fff;
-    padding: 10px;
-    margin: 0 5px;
+    color: $lightColor;
+    padding: 0.625rem;
+    margin: 0 0.3125rem;
+
     &:hover {
-      border-bottom: 2px solid #fff;
+      border-bottom: 2px solid $lightColor;
     }
   }
 }

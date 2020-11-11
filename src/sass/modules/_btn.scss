@@ -1,0 +1,19 @@
+@import "../base/variables";
+
+.btn {
+  display: inline-block;
+  padding: 0.625rem 1.875rem;
+  cursor: pointer;
+  background: $lightblue;
+  color: $lightColor;
+  border: none;
+  border-radius: 5px;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+  &--outline {
+    background-color: transparent;
+    border: 1px solid $lightColor;
+  }
+}

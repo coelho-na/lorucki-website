@@ -1,0 +1,76 @@
+@import "../base/variables";
+
+.showcase {
+  height: 400px;
+  background-color: $lightblue;
+  color: $lightColor;
+  position: relative;
+
+  &__title {
+    font-size: 2.5rem;
+  }
+
+  &__description {
+    margin: 1.25rem 0;
+  }
+
+  &__form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 1.25rem;
+    z-index: 100;
+    justify-self: flex-end;
+  }
+
+  &__form-control {
+    margin: 1.875rem 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: $lightColor;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-4deg);
+    -moz-transform: skewY(-4deg);
+    -ms-transform: skewY(-4deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: $lightColor;
+    transform: skewY(-4deg);
+    -webkit-transform: skewY(-4deg);
+    -moz-transform: skewY(-4deg);
+    -ms-transform: skewY(-4deg);
+  }
+
+  .grid {
+    overflow: visible;
+    grid-template-columns: 55% 45%;
+    gap: 1.875rem;
+  }
+}
+
+.showcase__form [type="text"],
+.showcase__form [type="email"] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 3px;
+  font-size: 1rem;
+}
+.showcase__form input {
+  outline: none;
+}
