@@ -1,0 +1,10 @@
+@import "../base/variables";
+
+.footer {
+  background-color: $darkerBlue;
+  color: $lightColor;
+  & a {
+    color: $lightColor;
+    margin: 0 10px;
+  }
+}
