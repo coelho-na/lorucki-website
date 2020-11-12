@@ -1,0 +1,17 @@
+.languages {
+    & .card{
+    text-align: center;
+    margin: 1.125rem 0.625rem 2.5rem;
+    
+    &:hover {
+        transform: translateY(-15px); //Will move up
+    }
+    }
+    & .flex{
+        flex-wrap: wrap;
+    }
+    &__subtitle{
+        font-size: 1.25rem;
+        margin-bottom: 0.625rem;
+    }
+}
