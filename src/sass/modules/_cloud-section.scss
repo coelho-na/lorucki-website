@@ -1,0 +1,13 @@
+@import "../base/variables";
+
+.cloud {
+  background: $lightblue;
+  color: $lightColor;
+  .grid {
+    grid-template-columns: 4fr 3fr;
+  }
+
+  &__subtitile {
+    font-size: 20px;
+  }
+}
