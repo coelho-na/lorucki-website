@@ -3,6 +3,7 @@ const sassFolder = "./src/sass/**/*.scss";
 const sassSRC = "./src/sass/style.scss";
 const folderDist = "./dist/css/";
 const htmlPath = "./index.html";
+const featurePath = "./features.html";
 const cssComp = "./dist/css/style.css";
 
 //// PLUGINS //////
@@ -23,11 +24,13 @@ function watchForChanges() {
     notify: false,
     server: {
       baseDir: "./",
+      index: "./features.html",
     },
   });
 
   watch(sassFolder, series(Sass, minifyCSS, cssInject));
   watch(htmlPath).on("change", browserSync.reload);
+  watch(featurePath).on("change", browserSync.reload);
 }
 
 ///////  COMPILE SASS TO REGULAR CSS //////////////
