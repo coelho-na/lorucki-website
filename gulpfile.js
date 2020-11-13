@@ -4,7 +4,9 @@ const sassSRC = "./src/sass/style.scss";
 const folderDist = "./dist/css/";
 const htmlPath = "./index.html";
 const featurePath = "./features.html";
+const docsPath = "./docs.html";
 const cssComp = "./dist/css/style.css";
+
 
 //// PLUGINS //////
 const { src, series, dest, watch } = require("gulp");
@@ -24,13 +26,14 @@ function watchForChanges() {
     notify: false,
     server: {
       baseDir: "./",
-      index: "./features.html",
+      index: "./docs.html",
     },
   });
 
   watch(sassFolder, series(Sass, minifyCSS, cssInject));
   watch(htmlPath).on("change", browserSync.reload);
   watch(featurePath).on("change", browserSync.reload);
+  watch(docsPath).on("change", browserSync.reload);
 }
 
 ///////  COMPILE SASS TO REGULAR CSS //////////////
