@@ -1,0 +1,17 @@
+.main{
+    & .card > i{
+        margin-right: 1.25rem;
+    }
+
+    & .grid {
+        padding: 1.875rem;
+    }
+
+    & .grid  > *:first-child{ //catch the first element
+        grid-column: 1 / span 3;
+    }
+
+    & .grid  > *:nth-child(2){ //catch the second child of the element
+        grid-column: 1 / span 2;
+    }
+}
