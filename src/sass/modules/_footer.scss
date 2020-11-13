@@ -3,8 +3,21 @@
 .footer {
   background-color: $darkerBlue;
   color: $lightColor;
-  & a {
+  text-align: center;
+  @include respond(tablet) {
+    text-align: left;
+  }
+  &__links,
+  &__social-media {
     color: $lightColor;
-    margin: 0 10px;
+  }
+
+  &__social-media {
+    margin-top: 1rem;
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
+    @include respond(tablet) {
+      margin: 0 0.625rem;
+    }
   }
 }

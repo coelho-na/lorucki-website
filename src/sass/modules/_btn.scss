@@ -15,6 +15,12 @@
   &--outline {
     background-color: transparent;
     border: 1px solid $lightColor;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    @include respond(tablet) {
+      margin-left: 0;
+      transform: translateX(0);
+    }
   }
 
   &--dark {

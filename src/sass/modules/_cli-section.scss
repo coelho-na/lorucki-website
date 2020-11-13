@@ -1,8 +1,19 @@
+@import "../base/mixins";
+
 .cli .grid {
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  & > *:first-child {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
+  @include respond(tablet) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    & > *:first-child {
+      grid-column: 1;
+      grid-row: 1;
+      @include respond(tablet) {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+      }
+    }
   }
 }

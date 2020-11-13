@@ -1,17 +1,32 @@
 @import "../base/variables";
+@import "../base/mixins";
 
 .showcase {
-  height: 400px;
+  height: auto;
   background-color: $lightblue;
   color: $lightColor;
   position: relative;
+  @include respond(tablet) {
+    height: 400px;
+  }
 
   &__title {
+    text-align: center;
+    margin-top: 40px;
     font-size: 2.5rem;
+    @include respond(tablet) {
+      margin-top: 0;
+      text-align: left;
+    }
   }
 
   &__description {
-    margin: 1.25rem 0;
+    text-align: center;
+    margin-top: 40px;
+    @include respond(tablet) {
+      margin: 1.25rem 0;
+      text-align: left;
+    }
   }
 
   &__form {
@@ -21,7 +36,12 @@
     width: 400px;
     padding: 1.25rem;
     z-index: 100;
-    justify-self: flex-end;
+    justify-self: center;
+    margin: auto;
+    @include respond(tablet) {
+      justify-self: flex-end;
+      margin: 0;
+    }
   }
 
   &__form-control {
@@ -58,8 +78,13 @@
 
   .grid {
     overflow: visible;
-    grid-template-columns: 55% 45%;
-    gap: 1.875rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    @include respond(tablet) {
+      grid-template-columns: 55% 45%;
+      gap: 1.875rem;
+    }
   }
 }
 

@@ -1,16 +1,31 @@
 @import "../base/variables";
+@import "../base/mixins";
 
 .navbar {
   background-color: $lightblue;
   color: $lightColor;
-  height: 70px;
+  height: 110px;
+
+  @include respond(tablet) {
+    height: 70px;
+  }
 
   .flex {
-    justify-content: space-between;
+    flex-direction: column;
+    @include respond(tablet) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
   }
 
   &__navegation {
     display: flex;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    @include respond(tablet) {
+      padding: 0;
+      background-color: $lightblue;
+    }
   }
 
   &__links {
