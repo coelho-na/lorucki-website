@@ -6,6 +6,7 @@ const htmlPath = "./index.html";
 const featurePath = "./features.html";
 const docsPath = "./docs.html";
 const cssComp = "./dist/css/style.css";
+const htmlFiles = "./**/*.html";
 
 //// PLUGINS //////
 const { src, series, dest, watch } = require("gulp");
@@ -17,6 +18,7 @@ const rename = require("gulp-rename");
 const concat = require("gulp-concat");
 const cleanCss = require("gulp-clean-css");
 const autoprefixer = require("gulp-autoprefixer");
+const htmlMinify = require("gulp-html-minify");
 
 ////// WATCH FILES FOR CHANGES //////////
 
@@ -30,8 +32,12 @@ function watchForChanges() {
 
   watch(sassFolder, series(Sass, minifyCSS, cssInject));
   watch(htmlPath).on("change", browserSync.reload);
-  watch(featurePath).on("change", browserSync.reload);
-  watch(docsPath).on("change", browserSync.reload);
+  watch(featurePath).on("change", series(htmlminify), browserSync.reload);
+  watch(docsPath).on("change", series(htmlminify), browserSync.reload);
+}
+
+function htmlminify() {
+  return src(htmlFiles).pipe(htmlMinify()).pipe(dest("./dist"));
 }
 
 ///////  COMPILE SASS TO REGULAR CSS //////////////
@@ -67,5 +73,5 @@ exports.watchForChanges = watchForChanges;
 exports.Sass = Sass;
 exports.minifyCSS = minifyCSS;
 exports.cssInject = cssInject;
-
+exports.htmlminify = htmlminify;
 exports.default = watchForChanges;

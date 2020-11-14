@@ -13,6 +13,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-html-minify": "0.0.14",
     "gulp-mode": "^1.0.2",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
