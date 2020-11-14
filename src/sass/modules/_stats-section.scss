@@ -1,6 +1,10 @@
 .stats {
   padding-top: 6.25rem;
 
+  @include respond(tablet) {
+    animation: slideInFromBottom 1s ease-in;
+  }
+
   &__heading {
     max-width: 500px;
     margin: auto;
