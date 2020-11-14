@@ -1,5 +1,6 @@
 @import "../base/variables";
 @import "../base/mixins";
+@import "./animations";
 
 .showcase {
   height: auto;
@@ -8,6 +9,13 @@
   position: relative;
   @include respond(tablet) {
     height: 400px;
+  }
+
+  &__info {
+    animation: slideInFromTop 1s ease-in;
+    @include respond(tablet) {
+      animation: slideInFromLeft 1s ease-in;
+    }
   }
 
   &__title {
@@ -37,10 +45,16 @@
     padding: 1.25rem;
     z-index: 100;
     justify-self: center;
+    animation: slideInFromBottom 1s ease-in;
     margin: auto;
     @include respond(tablet) {
       justify-self: flex-end;
       margin: 0;
+      animation: slideInFromRight 1s ease-in;
+    }
+    .hidden {
+      visibility: hidden;
+      height: 0;
     }
   }
 

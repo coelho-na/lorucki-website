@@ -7,7 +7,6 @@ const featurePath = "./features.html";
 const docsPath = "./docs.html";
 const cssComp = "./dist/css/style.css";
 
-
 //// PLUGINS //////
 const { src, series, dest, watch } = require("gulp");
 const browserSync = require("browser-sync").create();
@@ -26,7 +25,6 @@ function watchForChanges() {
     notify: false,
     server: {
       baseDir: "./",
-      index: "./docs.html",
     },
   });
 
