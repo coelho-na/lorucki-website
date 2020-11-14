@@ -1,0 +1,62 @@
+@import "../base/variables";
+
+.docs {
+  &__head {
+    text-align: center;
+    background-color: $lightblue;
+    color: $lightColor;
+    @include respond(tablet) {
+      text-align: left;
+    }
+    img {
+      width: 55%;
+      justify-self: center;
+      @include respond(tablet) {
+        width: 200px;
+        justify-self: flex-end;
+      }
+    }
+  }
+
+  &__main {
+    text-align: center;
+    @include respond(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      text-align: left;
+    }
+    & h3 {
+      margin: 1.25rem 0;
+    }
+
+    & a:hover {
+      font-weight: bold;
+    }
+
+    & pre,
+    & code {
+      background: $darkgrey;
+      color: $lightColor;
+      padding: 10px;
+    }
+  }
+
+  &__main .grid {
+    grid-template-columns: 1fr;
+    align-items: center;
+    @include respond(tablet) {
+      grid-template-columns: 1fr 2fr;
+      align-items: flex-start;
+    }
+  }
+
+  &__main .grid > *:first-child {
+    background-color: $lightGrey;
+  }
+
+  &__nav li {
+    font-size: 1, 7rem;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px #ccc solid;
+  }
+}
