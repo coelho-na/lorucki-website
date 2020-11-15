@@ -35,7 +35,7 @@ function watchForChanges() {
   watch(featurePath).on("change", series(htmlminify), browserSync.reload);
   watch(docsPath).on("change", series(htmlminify), browserSync.reload);
 }
-
+//////// MINIFY HTML FILES ///////
 function htmlminify() {
   return src(htmlFiles).pipe(htmlMinify()).pipe(dest("./dist"));
 }
