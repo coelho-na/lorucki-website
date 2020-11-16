@@ -17,13 +17,19 @@
     border: 1px solid $lightColor;
     margin-left: 50%;
     transform: translateX(-50%);
+    padding: 8px 15px;
     @include respond(tablet) {
       margin-left: 0;
       transform: translateX(0);
+      padding: 0.625rem 1.875rem;
     }
   }
 
   &--dark {
     background-color: $darkerBlue;
+    padding: 8px 15px;
+    @include respond(tablet) {
+      padding: 0.625rem 1.875rem;
+    }
   }
 }

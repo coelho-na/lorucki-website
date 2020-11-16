@@ -41,7 +41,6 @@
     position: relative;
     top: 60px;
     height: 350px;
-    width: 400px;
     padding: 1.25rem;
     z-index: 100;
     justify-self: center;
@@ -51,6 +50,7 @@
       justify-self: flex-end;
       margin: 0;
       animation: slideInFromRight 1s ease-in;
+      width: 400px;
     }
     .hidden {
       visibility: hidden;
