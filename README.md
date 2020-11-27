@@ -3,8 +3,8 @@
 > Fake cloud hosting website used in this [YouTube tutorial](https://www.youtube.com/watch?v=p0bGHP-PXD4)
 
 > Preview:
-> <img src="src\img\gifs\loruki-desktop-view.gif" width='50%' height='450px'/>
-> <img src="src\img\gifs\loruki-mobile-view.gif" width='50%' height='450px'>
+> <img src="src\img\gifs\loruki-desktop-view.gif" width='75%' height='450px'/>
+> <img src="src\img\gifs\loruki-mobile-view.gif" width='25%' height='450px'>
 
 <p align='center'> Demo on: </p>
 <p align='center'>
