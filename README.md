@@ -4,7 +4,7 @@
 
 > Preview:
 > <img src="src\img\gifs\loruki-desktop-view.gif" height='450px'/>
-> <img src="src\img\gifs\loruki-mobile-view.gif" height='450px'>
+> <img align='center' src="src\img\gifs\loruki-mobile-view.gif" height='450px'>
 
 <p align='center'> Demo on: </p>
 <p align='center'>
